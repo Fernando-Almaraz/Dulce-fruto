@@ -1,4 +1,5 @@
-* {
+
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -22,6 +23,7 @@
             justify-content: center;
             color: white;
             font-weight: bold;
+            object-fit: cover;
         }
         
         nav {
@@ -40,6 +42,7 @@
         
         nav a:hover {
             background-color: #e9ecef;
+            color: #292a2b;
         }
         
         .content-section {
@@ -47,11 +50,12 @@
             display: flex;
             align-items: flex-start;
             gap: 40px;
-            background-color:rgba(0, 0, 0, 0.511);
-            background-image: url(fondo.jpg);
+            background-color: rgba(0, 0, 0, 0.511);
+            background-image: linear-gradient(135deg, #ff9500, #ff6b35);
             background-blend-mode: multiply;
             margin-top: 0;
-            }
+            min-height: 60vh;
+        }
         
         .left-content {
             flex: 1;
@@ -81,8 +85,8 @@
             color: white;
             font-weight: bold;
             clip-path: circle(29vh);
+            object-fit: cover;
         }                                                                           
-
 
         .nosotros {
             background-color: #292a2b;
@@ -94,11 +98,11 @@
         .titulo_abajo {
             font-family: 'Poppins', sans-serif;
             text-align: center;
-            font-size:6vh;
+            font-size: 6vh;
             font-weight: 600;
             letter-spacing: 1vh;
             color: #f8f9fa;
-            margin-bottom:0.5vh;
+            margin-bottom: 0.5vh;
             position: relative;
         }
 
@@ -121,7 +125,8 @@
             font-weight: 300;
             text-align: justify;
         }
-    .nosotros_p::first-letter {
+        
+        .nosotros_p::first-letter {
             font-size: 5vh;
             font-family: 'Playfair Display', serif;
             font-weight: 700;
@@ -129,26 +134,9 @@
             float: left;
             line-height: 0.8;
             text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-
-        }
-@media (max-width: 768px) {
-            .nosotros_p::first-letter {
-            font-size: 8vh;
-            font-family: 'Playfair Display', serif;
-            font-weight: 700;
-            color: #f4a261;
-            float: left;
-            line-height: 0.8;
-            margin: 0.1vh 0.5vh 0 0;
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-        }
         }
 
-
-
-
-
-   .container {
+        .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 40px 20px;
@@ -218,7 +206,72 @@
             color: #666;
         }
         
+        /* Responsive Design para móviles */
         @media (max-width: 768px) {
+            header {
+                padding: 10px 15px;
+            }
+            
+            .logo {
+                width: 40px;
+                height: 40px;
+            }
+            
+            nav {
+                gap: 15px;
+            }
+            
+            nav a {
+                padding: 6px 12px;
+                font-size: 14px;
+            }
+            
+            .content-section {
+                flex-direction: column;
+                padding: 20px 15px;
+                gap: 20px;
+                text-align: center;
+            }
+            
+            .left-content h3 {
+                font-size: 8vh;
+                margin-bottom: 10px;
+            }
+            
+            .left-content p {
+                font-size: 4vh;
+            }
+            
+            .right-image {
+                width: 40vh;
+                height: 35vh;
+                clip-path: circle(18vh);
+                align-self: center;
+            }
+            
+            .nosotros {
+                padding: 2vh 2vh;
+            }
+            
+            .titulo_abajo {
+                font-size: 4vh;
+                letter-spacing: 0.5vh;
+            }
+            
+            .nosotros_p {
+                font-size: 2.5vh;
+                text-align: left;
+            }
+            
+            .nosotros_p::first-letter {
+                font-size: 8vh;
+                margin: 0.1vh 0.5vh 0 0;
+            }
+            
+            .container {
+                padding: 20px 15px;
+            }
+            
             .sections {
                 flex-direction: column;
                 gap: 20px;
@@ -226,5 +279,84 @@
             
             .section {
                 min-width: unset;
+                padding: 20px 15px;
+            }
+            
+            .title {
+                font-size: 20px;
+            }
+            
+            .icon {
+                width: 50px;
+                height: 50px;
+                font-size: 24px;
             }
         }
+        
+        /* Para pantallas muy pequeñas */
+        @media (max-width: 480px) {
+            header {
+                padding: 8px 10px;
+            }
+            
+            nav {
+                gap: 10px;
+            }
+            
+            nav a {
+                padding: 4px 8px;
+                font-size: 12px;
+            }
+            
+            .content-section {
+                padding: 15px 10px;
+            }
+            
+            .left-content h3 {
+                font-size: 6vh;
+            }
+            
+            .left-content p {
+                font-size: 3vh;
+            }
+            
+            .right-image {
+                width: 30vh;
+                height: 25vh;
+                clip-path: circle(13vh);
+            }
+            
+            .nosotros {
+                padding: 1.5vh 1.5vh;
+            }
+            
+            .titulo_abajo {
+                font-size: 3.5vh;
+                letter-spacing: 0.3vh;
+            }
+            
+            .nosotros_p {
+                font-size: 2vh;
+            }
+            
+            .nosotros_p::first-letter {
+                font-size: 6vh;
+            }
+            
+            .container {
+                padding: 15px 10px;
+            }
+            
+            .section {
+                padding: 15px 10px;
+            }
+            
+            .title {
+                font-size: 18px;
+            }
+            
+            .content {
+                font-size: 13px;
+            }
+        }
+    

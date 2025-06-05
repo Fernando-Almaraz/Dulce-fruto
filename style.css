@@ -451,7 +451,7 @@
     .procedimiento img {
     object-fit: cover;
     max-height: 300px;
-    margin: auto;
+    margin-left: 35%;
     }
 }
 
@@ -554,7 +554,7 @@
             list-style: none;
         }
 
-        .footer-section ul li {
+        .footer-section ul a {
             margin-bottom: 8px;
             color: #bdc3c7;
         }
